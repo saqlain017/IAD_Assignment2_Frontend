@@ -118,6 +118,13 @@ function App() {
           <div className="flex justify-between items-center">
             <h1 className="text-3xl font-bold text-gray-900">
               Project Manager
+              {projects && projects.length > 0 && (
+  <>
+    <br />
+    <span>Total Projects: {projects.length}</span>
+  </>
+)}
+
             </h1>
             <button
               onClick={() => {
