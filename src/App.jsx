@@ -11,7 +11,7 @@ function App() {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/api/projects");
+      const response = await fetch("https://project-management-production-2936.up.railway.app/api/projects");
       const data = await response.json();
 
       if (data.status === "success") {
@@ -33,7 +33,7 @@ function App() {
 
   const handleAddProject = async (projectName) => {
     try {
-      const response = await fetch("http://localhost:5000/api/projects", {
+      const response = await fetch("https://project-management-production-2936.up.railway.app/api/projects", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ function App() {
 
   const handleUpdateProject = async (id, projectName) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const response = await fetch(`https://project-management-production-2936.up.railway.app/api/projects/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ function App() {
       return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const response = await fetch(`https://project-management-production-2936.up.railway.app/api/projects/${id}`, {
         method: "DELETE",
       });
 
